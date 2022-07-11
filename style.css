@@ -1,5 +1,7 @@
-html,
-body {
+*{
+    box-sizing: border-box;
+}
+html,body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -85,20 +87,14 @@ table {
 
 }
 
-
-
-@media(max-width:400) {
-
+@media (max-width:400px) {
     .inputSection {
-        width: 100%;
-        background-color: red;
-        color: green;
-    }
-    .iTitle {
-        font-size: large;
-        color: red;
-        font-weight: 500;
-        margin-top: 10px;
-        margin-bottom: 5px;
+        width: 90%;
     }
 }
+@media (max-width:600px) {
+    .inputSection {
+        width: 80%;
+    }
+}
+
