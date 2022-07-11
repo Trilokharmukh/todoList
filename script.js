@@ -50,7 +50,7 @@ function showData() {
                 <td>${userRecord[i].title}</td>    
                 <td>${userRecord[i].description}</td>    
                 <td>${dateFormate()}</td>    
-                <td><button>Delete</button><button>Edit</button></td>    
+                <td><button type="button" onClick="deleteTodo(${i})">Delete</button><button>Edit</button></td>    
                 
             </tr>`
     }
@@ -70,4 +70,22 @@ function dateFormate() {
     const dd = d.getDate();
 
     return dd + " " + month + " " + y;
+}
+
+function deleteTodo(currTodo)
+{
+    console.log("delete called....");
+    console.log("delete called....", currTodo);
+    
+    let userRecord = JSON.parse(localStorage.getItem("todoRecord"))    // fetch data of "user" key and story in array
+    ? JSON.parse(localStorage.getItem("todoRecord"))
+    : []
+
+    console.log(userRecord);
+
+    userRecord.splice(currTodo, 1)
+    
+    localStorage.setItem("todoRecord", JSON.stringify(userRecord));
+    showData();
+    // localStorage.removeItem(todoRecord.userRecord[currTodo]);
 }
