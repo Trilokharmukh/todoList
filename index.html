@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>TodoList</title>
+</head>
+<div class="main">
+    <div>
+        <div class="header">Todo List</div>
+
+
+        <div class="inputSection">
+
+            <div class="titleSection">
+                <div class="title iTitle">Title</div>
+                <input id="title" class="userInput" type="text" placeholder="Enter Your Title" />
+            </div>
+            <div class="descriptionSection iTitle">
+                <div class="description">Description</div>
+                <textarea id="description" class="userInput" rows="10"></textarea>
+            </div>
+            <div class="buttonSection">
+                <button type="button" class="Add" onclick="saveData()">Add Todo</button>
+                <button type="button" class="ClearText">Clear Text</button>
+            </div>
+
+
+        </div>
+
+        <div class="userData">
+            <div class="dataTitle">Your List</div>
+
+            <div id="userData">
+                <table id="tableData">
+                    <thead>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+<body>
+
+</body>
+
+</html>
