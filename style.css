@@ -147,7 +147,7 @@ thead{background-color:rgb(252, 214, 167);}
 
 
 tbody:nth-child(even) {background-color: #fcecec;}
-tbody:nth-child(odd) {background-color: rgb(252, 240, 240);}
+tbody:nth-child(odd) {background-color: rgb(252, 227, 227);}
 
 tbody:hover{
     box-sizing: border-box;
