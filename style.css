@@ -79,14 +79,19 @@ textarea{
 }
 
 .userData {
-
     /* background-color: rgb(255, 255, 255); */
-    width: 90%;
+    width: 80%;
     /* width: 500px; */
     /* display: flex; */
     /* justify-content: center; */
     margin: auto;
     margin-top: 20px;
+    
+}
+#userData {
+ 
+    max-height:400px ;
+    overflow-y: auto; 
 }
 
 .dataTitle {
@@ -113,19 +118,21 @@ button{
     
 }
 
-table,
-th,
-td {
-
+table, th, td {
     /* border: 1px solid black; */
     border-collapse: collapse;
     text-align: center;
     padding: 5px;
     word-wrap: break-word;
+    border: 1px solid rgb(211, 205, 205);
 }
 
+th, thead{
+    position: sticky;
+    top:0px;
+}
 table {
-    width: 70%;
+    width: 100%;
     margin: auto;
     border: 1px solid rgb(252, 214, 167);
 
@@ -133,8 +140,8 @@ table {
 
 thead{background-color:rgb(252, 214, 167);}
 
-tbody:nth-child(even) {background-color: #f8dfdf;}
-tbody:nth-child(odd) {background-color: rgb(252, 237, 237);}
+tbody:nth-child(even) {background-color: #fde8e8;}
+tbody:nth-child(odd) {background-color: rgb(252, 240, 240);}
 
 @media (max-width:400px) {
     .inputSection {
