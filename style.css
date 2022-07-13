@@ -104,13 +104,15 @@ button{
     width: 60px;
     height: 20px;
     border-radius: 3px;
+    border : 1px solid rgb(250, 231, 231);
+    
 }
 
 table,
 th,
 td {
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-collapse: collapse;
     text-align: center;
     padding: 5px;
@@ -123,7 +125,7 @@ table {
 
 }
 
-tbody.tr:nth-child(odd) {background-color: #e06666;}
+tbody:nth-child(even) {background-color: #f3d6d6;}
 
 @media (max-width:400px) {
     .inputSection {
