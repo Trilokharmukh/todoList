@@ -8,6 +8,11 @@ function saveData() {
     let description = document.getElementById("description").value;      // get value of description input box
     console.log(title, description);
 
+    if(title==="" || description ===""){
+        alert("input field must be filled")
+        return;
+    }
+
     let userRecord = JSON.parse(localStorage.getItem("todoRecord"))     // create arr and assign previous localStorage value
         ? JSON.parse(localStorage.getItem("todoRecord"))
         : []
@@ -23,6 +28,7 @@ function saveData() {
     showData();
 
 }
+
 
 
 
@@ -150,7 +156,7 @@ function editData() {
 
 }
 
-function cancle() {
+function cancel() {
     document.querySelector(".inputSection").style.display = "block";
     document.querySelector(".editSection").style.display = "none";
 

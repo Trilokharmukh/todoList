@@ -32,6 +32,7 @@ html,body {
     /* justify-content: center; */
     margin: auto;
     padding: 15px;
+    border-radius: 20px 5px 20px 5px;
 }
 
 .editSection {
@@ -68,13 +69,13 @@ input{
     font-size: 15px;
 }
 
-.userDataSection {
+.userData {
 
-    background-color: rgb(255, 255, 255);
-    width: 50%;
+    /* background-color: rgb(255, 255, 255); */
+    width: 90%;
     /* width: 500px; */
     /* display: flex; */
-    justify-content: center;
+    /* justify-content: center; */
     margin: auto;
     margin-top: 20px;
 }
@@ -88,6 +89,10 @@ input{
 
 }
 
+button{
+    margin: 1px;
+}
+
 table,
 th,
 td {
@@ -99,7 +104,7 @@ td {
 }
 
 table {
-    width: 90%;
+    width: 70%;
     margin: auto;
 
 }
@@ -107,11 +112,17 @@ table {
 @media (max-width:400px) {
     .inputSection {
         width: 90%;
+    } 
+    .editSection {
+        width: 90%;
     }
 }
 @media (max-width:600px) {
     .inputSection {
         width: 80%;
+    }
+    .editSection {
+        width: 90%;
     }
 }
 
