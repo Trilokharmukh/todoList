@@ -114,8 +114,11 @@ button{
     width: 60px;
     height: 20px;
     border-radius: 3px;
-    border : 1px solid rgb(250, 231, 231);
-    
+    border : 1px solid rgb(250, 231, 231); 
+}
+button:hover{
+    background-color: #8c8d8d;
+    color: white;
 }
 
 table, th, td {
@@ -124,10 +127,12 @@ table, th, td {
     text-align: center;
     padding: 5px;
     word-wrap: break-word;
+    inline-size: 50px;
+    overflow-wrap: break-word;
     border: 1px solid rgb(211, 205, 205);
 }
 
-th, theadk{
+th, thead{
     position: sticky;
     top:0px;
 }
@@ -140,8 +145,15 @@ table {
 
 thead{background-color:rgb(252, 214, 167);}
 
+
 tbody:nth-child(even) {background-color: #fde8e8;}
 tbody:nth-child(odd) {background-color: rgb(252, 240, 240);}
+
+tbody:hover{
+    box-sizing: border-box;
+    background-color: hsl(56, 100%, 89%);
+    font-size: 17px;
+}
 
 @media (max-width:400px) {
     .inputSection {
