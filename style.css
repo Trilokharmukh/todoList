@@ -69,8 +69,13 @@ html,body {
 }
 
 input{
-    height: 30px;
-    
+    height: 35px;
+}
+.userInput:focus, .userInput:hover {
+    font-size: larger;
+}
+textarea{
+    height: 200px;
 }
 
 .userData {
@@ -122,10 +127,14 @@ td {
 table {
     width: 70%;
     margin: auto;
+    border: 1px solid rgb(252, 214, 167);
 
 }
 
-tbody:nth-child(even) {background-color: #f3d6d6;}
+thead{background-color:rgb(252, 214, 167);}
+
+tbody:nth-child(even) {background-color: #f8dfdf;}
+tbody:nth-child(odd) {background-color: rgb(252, 237, 237);}
 
 @media (max-width:400px) {
     .inputSection {
