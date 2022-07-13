@@ -23,7 +23,27 @@
             </div>
             <div class="buttonSection">
                 <button type="button" class="Add" onclick="saveData()">Add Todo</button>
-                <button type="button" class="ClearText">Clear Text</button>
+                <button type="button" class="ClearText" onclick="clearText()">Clear Text</button>
+                <button type="button" class="deleteAll" onclick="deleteAll()">delete All</button>
+            </div>
+
+
+        </div>
+        <!-- -------------edit section Initial hide this section show only if edit botton click -->
+        <div class="editSection" >
+
+            <div class="titleSection">
+                <div class="title iTitle">Title</div>
+                <input id="editTitle" class="userInput" type="text" placeholder="Enter Your Title" />
+            </div>
+            <div class="descriptionSection iTitle">
+                <div class="description">Description</div>
+                <textarea id="editDescription" class="userInput" rows="10"></textarea>
+            </div>
+            <div class="buttonSection">
+                <button type="button" class="edit" onclick="editData()">edit data</button>
+                <button type="button" class="cancle" onclick="cancle()">cancle</button>
+                <!-- <button type="button" class="deleteAll" onclick="deleteAll()">delete All</button> -->
             </div>
 
 

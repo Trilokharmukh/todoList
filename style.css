@@ -29,7 +29,16 @@ html,body {
     width: 50%;
     /* width: 500px; */
     /* display: flex; */
-    justify-content: center;
+    /* justify-content: center; */
+    margin: auto;
+    padding: 15px;
+}
+
+.editSection {
+    display: none;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
     margin: auto;
     padding: 15px;
 }
@@ -52,6 +61,11 @@ html,body {
     min-width: 98%;
     max-width: 98%;
     /* min-width: 250px; */
+}
+
+input{
+    height: 30px;
+    font-size: 15px;
 }
 
 .userDataSection {
@@ -77,8 +91,11 @@ html,body {
 table,
 th,
 td {
+
     border: 1px solid black;
     border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
 }
 
 table {
