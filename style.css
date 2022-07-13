@@ -146,12 +146,12 @@ table {
 thead{background-color:rgb(252, 214, 167);}
 
 
-tbody:nth-child(even) {background-color: #fde8e8;}
+tbody:nth-child(even) {background-color: #fcecec;}
 tbody:nth-child(odd) {background-color: rgb(252, 240, 240);}
 
 tbody:hover{
     box-sizing: border-box;
-    background-color: hsl(56, 100%, 89%);
+    background-color: hsl(55, 86%, 92%);
     font-size: 17px;
 }
 
