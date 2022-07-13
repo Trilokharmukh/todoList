@@ -24,12 +24,11 @@ function saveData() {
 
     localStorage.setItem("todoRecord", JSON.stringify(userRecord));    // finnaly store data in localStorage
 
+    alert("saved.....")
     clearText()
     showData();
 
 }
-
-
 
 
 // ----------------- showData function ------------------- 
@@ -64,7 +63,7 @@ function showData() {
                 <td>${sn++}</td>
                 <td>${userRecord[i].title}</td>    
                 <td>${userRecord[i].description}</td>    
-                <td>${dateFormate()}</td>    
+                <td class="tableDate">${dateFormate()}</td>    
                 <td><button type="button" onClick="deleteTodo(${i})">Delete</button> 
                 <button type="button" onClick="editTodo(${i})">Edit</button></td>    
                 
@@ -89,9 +88,19 @@ function dateFormate() {
 }
 
 
+//  --------- delete / clear / delete all function section -----------------------------------------------
 
 
-// ------------ delete current todo function--------------------------
+
+//---------- clear text---------
+
+function clearText() {
+    document.getElementById("title").value = "";
+    document.getElementById("description").value = "";
+}
+
+
+// ------------ delete current todo function-------------
 
 function deleteTodo(currTodo) {
     console.log("delete called....");
@@ -111,13 +120,32 @@ function deleteTodo(currTodo) {
 }
 
 
-// -----------------  edit current todo ---------------------
-//  --------------table ke edit button pr click krne se ye function call hoga------
+// =--- -- delete all---------
 
+function deleteAll() {
+    if (confirm("are you really want to delete all record?? \nif record is deleted they can not be retrived")){
+     
+        localStorage.clear();       // clear local Storage
+    }
+
+    clearText();
+    location.reload();
+}
+// ---------------------------------------end delete Section-----------------------------
+
+
+
+
+// -------------------------------  edit / update Section ---------------------
+
+
+// ------ editTodo funtion -------------
+//-->table ke edit button pr click krne se ye function call hoga
+//-->is function ka use jis todo ko update usko input box m put krna aur uska index editData ke liye save krna 
 
 function editTodo(currTodo) {
-    document.querySelector(".inputSection").style.display = "none";
-    document.querySelector(".editSection").style.display = "block";
+    document.querySelector(".inputSection").style.display = "none";    // hide add todo wala box
+    document.querySelector(".editSection").style.display = "block";    // show update wala section
 
     let userRecord = JSON.parse(localStorage.getItem("todoRecord"))
         ? JSON.parse(localStorage.getItem("todoRecord"))
@@ -128,12 +156,14 @@ function editTodo(currTodo) {
     document.getElementById("editTitle").value = todoData.title;            // put current value in input box
     document.getElementById("editDescription").value = todoData.description;
 
-    editIndex = currTodo;
+    editIndex = currTodo;               // this variable will used in updateDAta
 
     console.log("editIndex = ", editIndex);
 }
 
-function editData() {
+// -------------- update Data funtion-----------------
+// -->this is used for update value 
+function updateData() {
     
     console.log("editIndex = ", editIndex);
     
@@ -141,41 +171,32 @@ function editData() {
     let title = document.getElementById("editTitle").value;            // put current value in input box
     let description = document.getElementById("editDescription").value;
 
+    if(title==="" || description ===""){
+        alert("input field must be filled")
+        return;
+    }
+
     let userRecord = JSON.parse(localStorage.getItem("todoRecord"))
         ? JSON.parse(localStorage.getItem("todoRecord"))
         : []
 
-    userRecord[editIndex] = { "title": title, "description": description }
+    userRecord[editIndex] = { "title": title, "description": description }  // edit wale index me update value se replace
 
     localStorage.setItem("todoRecord", JSON.stringify(userRecord));
 
     document.querySelector(".inputSection").style.display = "block";
     document.querySelector(".editSection").style.display = "none";
 
+    alert("updated...")
     showData()
 
 }
+
+// ------------------------ end edit/ update section------------------
+
 
 function cancel() {
     document.querySelector(".inputSection").style.display = "block";
     document.querySelector(".editSection").style.display = "none";
 
-}
-
-
-
-
-function clearText() {
-    document.getElementById("title").value = "";
-    document.getElementById("description").value = "";
-}
-
-
-
-function deleteAll() {
-    if (confirm("are you really want to delete all record?? \nif record is deleted they can not be retrived"))
-        localStorage.clear();
-
-    clearText();
-    location.reload();
 }
