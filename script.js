@@ -115,6 +115,9 @@ function deleteTodo(currTodo) {
     userRecord.splice(currTodo, 1)
 
     localStorage.setItem("todoRecord", JSON.stringify(userRecord));
+
+    document.querySelector(".inputSection").style.display = "block";
+    document.querySelector(".editSection").style.display = "none";
     showData();
     // localStorage.removeItem(todoRecord.userRecord[currTodo]);
 }

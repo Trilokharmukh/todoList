@@ -114,6 +114,7 @@ td {
     border-collapse: collapse;
     text-align: center;
     padding: 5px;
+    word-wrap: break-word;
 }
 
 table {
@@ -121,6 +122,8 @@ table {
     margin: auto;
 
 }
+
+tbody.tr:nth-child(odd) {background-color: #e06666;}
 
 @media (max-width:400px) {
     .inputSection {
