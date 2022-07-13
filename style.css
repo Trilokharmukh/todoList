@@ -151,8 +151,8 @@ tbody:nth-child(odd) {background-color: rgb(252, 240, 240);}
 
 tbody:hover{
     box-sizing: border-box;
-    background-color: hsl(55, 86%, 92%);
-    font-size: 17px;
+    background-color: hsl(55, 100%, 96%);
+    /* font-size: 17px; */
 }
 
 @media (max-width:400px) {
