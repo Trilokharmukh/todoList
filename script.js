@@ -19,7 +19,8 @@ function saveData() {
 
     userRecord.push({                                                  // push value in array  
         "title": title,
-        "description": description
+        "description": description,
+        "date": dateFormate()
     })
 
     localStorage.setItem("todoRecord", JSON.stringify(userRecord));    // finnaly store data in localStorage
@@ -63,7 +64,7 @@ function showData() {
                 <td>${sn++}</td>
                 <td>${userRecord[i].title}</td>    
                 <td>${userRecord[i].description}</td>    
-                <td class="tableDate">${dateFormate()}</td>    
+                <td class="tableDate">${userRecord[i].date}</td>    
                 <td><button type="button" onClick="deleteTodo(${i})">Delete</button> 
                 <button type="button" onClick="editTodo(${i})">Edit</button></td>    
                 
